@@ -7,10 +7,13 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import styles from "./tailwind.css";
-import Layout from "~/components/Layout";
 
-export const links: LinksFunction = () => [{ rel: "stylesheet", href: styles }];
+import Layout from "~/components/Layout";
+import tailwindStylesheetUrl from "./tailwind.css";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: tailwindStylesheetUrl },
+];
 
 export default function App() {
   return (
